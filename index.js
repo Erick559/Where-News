@@ -8,19 +8,24 @@ let isOpen = false;
 hamburgerMenuButton.addEventListener('click', () => {
     isOpen = true;
 
-    if (isOpen) {
-        overlayMenu.classList.add('open');
-        overlay.classList.add('active');
-    }
-    else {
-        overlayMenu.classList.remove('open');
-        overlay.classList.remove('active');
-    }
+    openOverlayMenu();
 });
 
 hamburgerCloseButton.addEventListener('click', () => {
     isOpen = false;
 
-    overlay.classList.remove('active');
-    overlayMenu.classList.remove('open');
+    openOverlayMenu();
 });
+
+function openOverlayMenu(){
+    if(isOpen) {
+        overlayMenu.classList.add('open');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    else{
+        overlay.classList.remove('active');
+        overlayMenu.classList.remove('open');
+        document.body.style.overflow = 'auto';
+    }
+}
