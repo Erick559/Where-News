@@ -232,7 +232,8 @@ body {
         cursor: pointer;
     }
 
-    .overlay-menu {
+    .overlay-menu,
+    .overlay{
         display: none;
     }
 
