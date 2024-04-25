@@ -170,17 +170,21 @@ body {
 }
 
 .overlay {
-    position: absolute;
-    inset: 0;
     background: black;
     opacity:0.6;
 }
 
+.overlay,
 .overlay-menu {
+    transition: display 1s ease-in-out;
+}
+
+.overlay.active ,
+.overlay-menu.open {
     position:absolute;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
     inset: 0;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
 }
 
 .overlay-container {
@@ -198,6 +202,7 @@ body {
 .hamburger-close {
     text-align: right;
     margin-bottom: 50px;
+    cursor: pointer;
 }
 
 .menu-list {
@@ -210,6 +215,7 @@ body {
     list-style: none;
     font-size:25px;
     font-weight: 600;
+    cursor: pointer;
 }
 
 @media only screen and (min-width:700px) {
@@ -232,8 +238,8 @@ body {
         cursor: pointer;
     }
 
-    .overlay-menu,
-    .overlay{
+    .overlay-menu.open,
+    .overlay.active{
         display: none;
     }
 
