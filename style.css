@@ -196,7 +196,7 @@ body {
     height: 100%;
     background: white;
     z-index: 999;
-    padding:50px;
+    padding:5%;
 }
 
 .hamburger-close {
