@@ -169,14 +169,14 @@ body {
     color:hsl(5, 85%, 63%);
 }
 
-.overlay {
+.overlay{
     background: black;
     opacity:0.6;
 }
 
 .overlay,
 .overlay-menu {
-    transition: display 1s ease-in-out;
+    display: none;
 }
 
 .overlay.active ,
