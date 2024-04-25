@@ -2,6 +2,7 @@ const overlayMenu = document.querySelector('.overlay-menu');
 const overlay = document.querySelector('.overlay');
 const hamburgerMenuButton = document.querySelector('.hamburger-menu');
 const hamburgerCloseButton = document.querySelector('.hamburger-close');
+const menuItems = document.querySelectorAll('.menu-items');
 
 let isOpen = false;
 
@@ -16,6 +17,15 @@ hamburgerCloseButton.addEventListener('click', () => {
 
     openOverlayMenu();
 });
+
+menuItems.forEach((menuItem)=> {
+    menuItem.addEventListener('click',()=>{
+        isOpen = false;
+        openOverlayMenu();
+    })
+})
+
+
 
 function openOverlayMenu(){
     if(isOpen) {
